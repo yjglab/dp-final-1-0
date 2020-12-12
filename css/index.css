@@ -1,0 +1,18 @@
+html,
+body {
+  overflow: hidden;
+  color: white;
+  background-color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.planeicon {
+  position: absolute;
+  top: 25.5%;
+  transition: 1s ease-in-out;
+  will-change: transform;
+}
+.planeicon img {
+  width: 3vw;
+  height: 4.3vh;
+}

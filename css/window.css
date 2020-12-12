@@ -1,0 +1,205 @@
+#window {
+  width: 60vh;
+  height: 60vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+  /* background: rgb(166, 160, 218); */
+  background: linear-gradient(
+    0deg,
+    rgba(166, 160, 218, 1) 0%,
+    rgba(252, 171, 205, 1) 81%
+  );
+  border-radius: 50%;
+  border: 0px solid #070e29;
+  box-shadow: 0px 0px 15px 7px rgba(73, 73, 73, 0.267);
+
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.4s ease-in-out;
+}
+.window__Shadow {
+  width: 50%;
+  height: 100%;
+  background-color: #2f2f2f25;
+  /* background: rgb(255, 255, 255); */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(67, 0, 77, 0.322) 100%
+  );
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+.land {
+  position: absolute;
+  border-radius: 50px;
+}
+
+.land:first-child {
+  width: 2vh;
+  height: 2vh;
+  top: 10%;
+
+  animation: housemove 10s infinite linear;
+  animation-delay: -1.5s;
+}
+.land:first-child img {
+  width: 89%;
+}
+.land:nth-child(2) {
+  width: 11vh;
+  height: 3vh;
+  top: 10%;
+
+  animation: housemove 110s infinite linear;
+  animation-delay: -2s;
+}
+.land:nth-child(2) img {
+  width: 270%;
+}
+.land:nth-child(3) {
+  top: 34%;
+  width: 11vh;
+  height: 3vh;
+  animation: housemove 14s infinite linear;
+  animation-delay: -4.5s;
+}
+.land:nth-child(3) img {
+  width: 22%;
+}
+.land:nth-child(4) {
+  width: 15vh;
+  height: 7vh;
+  top: 15%;
+  opacity: 0.6;
+  animation: housemove 28s infinite linear;
+  animation-delay: 0s;
+}
+.land:nth-child(4) img {
+  width: 27%;
+}
+.land:nth-child(5) {
+  width: 15vh;
+  height: 9vh;
+  top: 37%;
+  opacity: 0.6;
+  animation: housemove 70s infinite linear;
+  animation-delay: -5.6s;
+}
+.land:nth-child(5) img {
+  width: 32%;
+}
+.land:nth-child(6) {
+  width: 100%;
+  height: 100%;
+  top: 62%;
+  opacity: 0;
+  animation: bottommove 70s infinite linear;
+  animation-delay: -30s;
+}
+.land:nth-child(6) img {
+  width: 140%;
+}
+.land:nth-child(7) {
+  width: 100%;
+  height: 100%;
+  top: 43%;
+  opacity: 0;
+  animation: bottommove 70s infinite linear;
+  animation-delay: 9s;
+}
+.land:nth-child(7) img {
+  width: 140%;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 50px;
+  opacity: 0;
+}
+.cloud:first-child {
+  width: 8vh;
+  height: 4vh;
+  top: 5%;
+
+  animation: mymove 28s infinite linear;
+  animation-delay: -2.9s;
+}
+.cloud:nth-child(2) {
+  width: 15vh;
+  height: 3vh;
+  top: 27%;
+
+  animation: mymove 27s infinite linear;
+  animation-delay: -8.2s;
+}
+.cloud:nth-child(3) {
+  width: 12vh;
+  height: 5vh;
+  top: 50%;
+
+  animation: mymove 17s infinite linear;
+  animation-delay: 6s;
+}
+
+.cloud:nth-child(4) {
+  width: 8vh;
+  height: 3vh;
+  top: 84%;
+
+  animation: mymove 32s infinite linear;
+  animation-delay: 20s;
+}
+.cloud:nth-child(5) {
+  width: 14vh;
+  height: 3vh;
+  top: 90%;
+
+  animation: mymove 24s infinite linear;
+  animation-delay: 4.2s;
+}
+.cloud:nth-child(6) {
+  width: 14vh;
+  height: 3vh;
+  top: 65%;
+
+  animation: mymove 22s infinite linear;
+  animation-delay: -4.2s;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 1;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: -75%;
+  }
+}
+
+@keyframes housemove {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes bottommove {
+  from {
+    opacity: 1;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: -120%;
+  }
+}
